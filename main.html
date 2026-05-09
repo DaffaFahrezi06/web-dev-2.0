@@ -8,16 +8,7 @@
         <img src="./img/logo.png" alt="ResepRumah Logo">
         DapurMu
     </title>
-    <style>
-        .sections {
-
-        }
-
-        @media (max-width: 480px) {
-            .sections {
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="css/a.css">
 </head>
 <body class="bg-[#e3c4a3] flex flex-col items-center gap-12">
     <!-- Navigation Bar -->
@@ -38,14 +29,14 @@
             <a href="./saved.html" class="hover:text-[#bbf7d0] duration-300 hover:scale-[102%]">Saved Recipe</a>
             <img src="./img/Setting.png" 
                 alt="Setting"
-                id="setting-icon" 
+                id="setting_icon" 
                 class="size-[2rem]">
         </nav>
     </header>
 
     <!-- Tulisan -->
-    <section id="" class="w-full min-w-[1100px] h-[450px] bg-[url(./img/background.jpg)] bg-cover bg-center flex justify-center items-center mt-[-48px] border-b-2 border-[#bbf7d0] 
-                          max-[480px]:h-[200px]">
+    <section id="message_section" class="w-full min-[481px]:min-w-[1100px] h-[450px] bg-[url(./img/background.jpg)] bg-cover bg-center flex justify-center items-center mt-[-48px] border-b-2 border-[#bbf7d0] 
+                                        max-[480px]:h-[200px]">
         <div id="message_container" class="w-full h-fit bg-white/50 backdrop-blur-md flex flex-col items-center justify-center p-8 gap-4 text-[#1e293b] text-[1.25rem] text-center
                                            max-[480px]:min-w-[350px] max-[480px]:py-4 max-[480px]:text-[1rem]">
             <h2>Bingung Mau Masak Apa Hari Ini?</h2>
@@ -58,7 +49,7 @@
                                           max-[480px]:w-[90%] max-[480px]:min-w-[350px]">
         <div id="search_bar" class="flex w-[50%] hover:scale-105 duration-300
                                     max-[480px]:w-[80%]">
-            <input type="text" placeholder="Cari resep berdasarkan bahan, nama, atau kategori..." 
+            <input type="text" placeholder="Cari resep" 
                    id="search_input"
                    class="w-[85%] h-[3rem] bg-white/85 text-[#1e293b] pl-4 rounded-l-lg border-2 border-[#e2e8f0] focus:outline-none focus:ring-2 focus:ring-[#bbf7d0]">
             <button id="search_button" class="w-[15%] h-[3rem] bg-[#bbf7d0] text-[#1e293b] rounded-r-lg hover:bg-[#c91b2a] transition-colors duration-300">Cari</button>
@@ -67,109 +58,89 @@
 
     <!-- Recipe Container -->
     <section id="recipe_container" class="w-[65%] min-w-[1100px] h-fit bg-white/90 flex flex-col items-center justify-center pt-8 gap-8 text-[1.25rem] rounded-lg 
-                                          max-[480px]:w-[90%] max-[480px]:min-w-[350px] max-[480px]:pt-4 max-[480px]:gap-4">
+                                          max-[480px]:w-[90%] max-[480px]:min-w-[340px] max-[480px]:pt-4 max-[480px]:gap-4">
         <h2 class="text-[#1e293b] font-bold">----- Resep Populer -----</h2>
-        <div id="recipes" class="w-full max-h-[650px] grid grid-cols-4 px-2 pt-1 gap-0 overflow-y-auto 
+        <div id="recommendation_container" class="w-full max-h-[650px] grid grid-cols-4 px-2 pt-1 gap-0 overflow-y-auto 
                                  max-[480px]:grid-cols-2">
             
-            <div class="w-[90%] bg-white flex flex-col p-4 gap-2 m-2 text-[#1e293b] shadow-md border border-gray-100 rounded-lg duration-300 transition-all hover:-translate-y-1 hover:border-[#15803d] hover:z-10 max-[480px]:gap-3">
-                <img src="https://www.themealdb.com/images/media/meals/1529442316.jpg" alt="Ayam Bakar Taliwang" 
-                     class="w-full h-[165px] rounded-lg object-cover 
-                     max-[480px]:h-[120px]">
-                <h3 class="text-[1.1rem] font-semibold">Ayam Bakar Taliwang</h3>
-                <p class="text-[1rem]">Ayam bakar khas Lombok dengan bumbu pedas yang menggugah selera.</p>
-                <button class="w-full bg-[#bbf7d0] py-2 text-[1.1rem] text-[#1e293b] rounded-lg hover:bg-[#4ade80] transition-colors duration-300">Lihat Resep</button>
-                <button class="w-full bg-[#15803d] py-2 text-[1.1rem] text-white rounded-lg hover:bg-[#14532d] transition-colors duration-300">Simpan Resep</button>
+            <div class="recommended-recipe">
+                <img src="https://www.themealdb.com/images/media/meals/1529442316.jpg" alt="Ayam Bakar Taliwang" class="recipe-img">
+                <h3 class="recipe-title">Ayam Bakar Taliwang</h3>
+                <p class="recipe-desc">Ayam bakar khas Lombok dengan bumbu pedas yang menggugah selera.</p>
+                <button class="btn-view">Lihat Resep</button>
+                <button class="btn-save">Simpan Resep</button>
             </div>
 
-            <div class="w-90% bg-white flex flex-col p-4 gap-2 m-2 text-[#1e293b] shadow-md border border-gray-100 rounded-lg duration-300 transition-all hover:-translate-y-1 hover:border-[#15803d] hover:z-10 max-[480px]:gap-3">
-                <img src="https://www.themealdb.com/images/media/meals/1529442316.jpg" alt="Ayam Bakar Taliwang" 
-                     class="w-full h-[165px] rounded-lg object-cover 
-                     max-[480px]:h-[120px]">
-                <h3 class="text-[1.1rem] font-semibold">Ayam Bakar Taliwang</h3>
-                <p class="text-[1rem]">Ayam bakar khas Lombok dengan bumbu pedas yang menggugah selera.</p>
-                <button class="w-full bg-[#bbf7d0] py-2 text-[1.1rem] text-[#1e293b] rounded-lg hover:bg-[#4ade80] transition-colors duration-300">Lihat Resep</button>
-                <button class="w-full bg-[#15803d] py-2 text-[1.1rem] text-white rounded-lg hover:bg-[#14532d] transition-colors duration-300">Simpan Resep</button>
+            <div class="recommended-recipe">
+                <img src="https://www.themealdb.com/images/media/meals/1529442316.jpg" alt="Ayam Bakar Taliwang" class="recipe-img">
+                <h3 class="recipe-title">Ayam Bakar Taliwang</h3>
+                <p class="recipe-desc">Ayam bakar khas Lombok dengan bumbu pedas yang menggugah selera.</p>
+                <button class="btn-view">Lihat Resep</button>
+                <button class="btn-save">Simpan Resep</button>
             </div>
 
-            <div class="w-90% bg-white flex flex-col p-4 gap-2 m-2 text-[#1e293b] shadow-md border border-gray-100 rounded-lg duration-300 transition-all hover:-translate-y-1 hover:border-[#15803d] hover:z-10 max-[480px]:gap-3">
-                <img src="https://www.themealdb.com/images/media/meals/1529442316.jpg" alt="Ayam Bakar Taliwang" 
-                     class="w-full h-[165px] rounded-lg object-cover 
-                     max-[480px]:h-[120px]">
-                <h3 class="text-[1.1rem] font-semibold">Ayam Bakar Taliwang</h3>
-                <p class="text-[1rem]">Ayam bakar khas Lombok dengan bumbu pedas yang menggugah selera.</p>
-                <button class="w-full bg-[#bbf7d0] py-2 text-[1.1rem] text-[#1e293b] rounded-lg hover:bg-[#4ade80] transition-colors duration-300">Lihat Resep</button>
-                <button class="w-full bg-[#15803d] py-2 text-[1.1rem] text-white rounded-lg hover:bg-[#14532d] transition-colors duration-300">Simpan Resep</button>
+            <div class="recommended-recipe">
+                <img src="https://www.themealdb.com/images/media/meals/1529442316.jpg" alt="Ayam Bakar Taliwang" class="recipe-img">
+                <h3 class="recipe-title">Ayam Bakar Taliwang</h3>
+                <p class="recipe-desc">Ayam bakar khas Lombok dengan bumbu pedas yang menggugah selera.</p>
+                <button class="btn-view">Lihat Resep</button>
+                <button class="btn-save">Simpan Resep</button>
             </div>
 
-            <div class="w-90% bg-white flex flex-col p-4 gap-2 m-2 text-[#1e293b] shadow-md border border-gray-100 rounded-lg duration-300 transition-all hover:-translate-y-1 hover:border-[#15803d] hover:z-10 max-[480px]:gap-3">
-                <img src="https://www.themealdb.com/images/media/meals/1529442316.jpg" alt="Ayam Bakar Taliwang" 
-                     class="w-full h-[165px] rounded-lg object-cover 
-                     max-[480px]:h-[120px]">
-                <h3 class="text-[1.1rem] font-semibold">Ayam Bakar Taliwang</h3>
-                <p class="text-[1rem]">Ayam bakar khas Lombok dengan bumbu pedas yang menggugah selera.</p>
-                <button class="w-full bg-[#bbf7d0] py-2 text-[1.1rem] text-[#1e293b] rounded-lg hover:bg-[#4ade80] transition-colors duration-300">Lihat Resep</button>
-                <button class="w-full bg-[#15803d] py-2 text-[1.1rem] text-white rounded-lg hover:bg-[#14532d] transition-colors duration-300">Simpan Resep</button>
+            <div class="recommended-recipe">
+                <img src="https://www.themealdb.com/images/media/meals/1529442316.jpg" alt="Ayam Bakar Taliwang" class="recipe-img">
+                <h3 class="recipe-title">Ayam Bakar Taliwang</h3>
+                <p class="recipe-desc">Ayam bakar khas Lombok dengan bumbu pedas yang menggugah selera.</p>
+                <button class="btn-view">Lihat Resep</button>
+                <button class="btn-save">Simpan Resep</button>
             </div>
 
-            <div class="w-90% bg-white flex flex-col p-4 gap-2 m-2 text-[#1e293b] shadow-md border border-gray-100 rounded-lg duration-300 transition-all hover:-translate-y-1 hover:border-[#15803d] hover:z-10 max-[480px]:gap-3">
-                <img src="https://www.themealdb.com/images/media/meals/1529442316.jpg" alt="Ayam Bakar Taliwang" 
-                     class="w-full h-[165px] rounded-lg object-cover 
-                     max-[480px]:h-[120px]">
-                <h3 class="text-[1.1rem] font-semibold">Ayam Bakar Taliwang</h3>
-                <p class="text-[1rem]">Ayam bakar khas Lombok dengan bumbu pedas yang menggugah selera.</p>
-                <button class="w-full bg-[#bbf7d0] py-2 text-[1.1rem] text-[#1e293b] rounded-lg hover:bg-[#4ade80] transition-colors duration-300">Lihat Resep</button>
-                <button class="w-full bg-[#15803d] py-2 text-[1.1rem] text-white rounded-lg hover:bg-[#14532d] transition-colors duration-300">Simpan Resep</button>
+            <div class="recommended-recipe">
+                <img src="https://www.themealdb.com/images/media/meals/1529442316.jpg" alt="Ayam Bakar Taliwang" class="recipe-img">
+                <h3 class="recipe-title">Ayam Bakar Taliwang</h3>
+                <p class="recipe-desc">Ayam bakar khas Lombok dengan bumbu pedas yang menggugah selera.</p>
+                <button class="btn-view">Lihat Resep</button>
+                <button class="btn-save">Simpan Resep</button>
             </div>
 
-            <div class="w-90% bg-white flex flex-col p-4 gap-2 m-2 text-[#1e293b] shadow-md border border-gray-100 rounded-lg duration-300 transition-all hover:-translate-y-1 hover:border-[#15803d] hover:z-10 max-[480px]:gap-3">
-                <img src="https://www.themealdb.com/images/media/meals/1529442316.jpg" alt="Ayam Bakar Taliwang" 
-                     class="w-full h-[165px] rounded-lg object-cover 
-                     max-[480px]:h-[120px]">
-                <h3 class="text-[1.1rem] font-semibold">Ayam Bakar Taliwang</h3>
-                <p class="text-[1rem]">Ayam bakar khas Lombok dengan bumbu pedas yang menggugah selera.</p>
-                <button class="w-full bg-[#bbf7d0] py-2 text-[1.1rem] text-[#1e293b] rounded-lg hover:bg-[#4ade80] transition-colors duration-300">Lihat Resep</button>
-                <button class="w-full bg-[#15803d] py-2 text-[1.1rem] text-white rounded-lg hover:bg-[#14532d] transition-colors duration-300">Simpan Resep</button>
+            <div class="recommended-recipe">
+                <img src="https://www.themealdb.com/images/media/meals/1529442316.jpg" alt="Ayam Bakar Taliwang" class="recipe-img">
+                <h3 class="recipe-title">Ayam Bakar Taliwang</h3>
+                <p class="recipe-desc">Ayam bakar khas Lombok dengan bumbu pedas yang menggugah selera.</p>
+                <button class="btn-view">Lihat Resep</button>
+                <button class="btn-save">Simpan Resep</button>
             </div>
 
-            <div class="w-90% bg-white flex flex-col p-4 gap-2 m-2 text-[#1e293b] shadow-md border border-gray-100 rounded-lg duration-300 transition-all hover:-translate-y-1 hover:border-[#15803d] hover:z-10 max-[480px]:gap-3">
-                <img src="https://www.themealdb.com/images/media/meals/1529442316.jpg" alt="Ayam Bakar Taliwang" 
-                     class="w-full h-[165px] rounded-lg object-cover 
-                     max-[480px]:h-[120px]">
-                <h3 class="text-[1.1rem] font-semibold">Ayam Bakar Taliwang</h3>
-                <p class="text-[1rem]">Ayam bakar khas Lombok dengan bumbu pedas yang menggugah selera.</p>
-                <button class="w-full bg-[#bbf7d0] py-2 text-[1.1rem] text-[#1e293b] rounded-lg hover:bg-[#4ade80] transition-colors duration-300">Lihat Resep</button>
-                <button class="w-full bg-[#15803d] py-2 text-[1.1rem] text-white rounded-lg hover:bg-[#14532d] transition-colors duration-300">Simpan Resep</button>
+            <div class="recommended-recipe">
+                <img src="https://www.themealdb.com/images/media/meals/1529442316.jpg" alt="Ayam Bakar Taliwang" class="recipe-img">
+                <h3 class="recipe-title">Ayam Bakar Taliwang</h3>
+                <p class="recipe-desc">Ayam bakar khas Lombok dengan bumbu pedas yang menggugah selera.</p>
+                <button class="btn-view">Lihat Resep</button>
+                <button class="btn-save">Simpan Resep</button>
             </div>
 
-            <div class="w-90% bg-white flex flex-col p-4 gap-2 m-2 text-[#1e293b] shadow-md border border-gray-100 rounded-lg duration-300 transition-all hover:-translate-y-1 hover:border-[#15803d] hover:z-10 max-[480px]:gap-3">
-                <img src="https://www.themealdb.com/images/media/meals/1529442316.jpg" alt="Ayam Bakar Taliwang" 
-                     class="w-full h-[165px] rounded-lg object-cover 
-                     max-[480px]:h-[120px]">
-                <h3 class="text-[1.1rem] font-semibold">Ayam Bakar Taliwang</h3>
-                <p class="text-[1rem]">Ayam bakar khas Lombok dengan bumbu pedas yang menggugah selera.</p>
-                <button class="w-full bg-[#bbf7d0] py-2 text-[1.1rem] text-[#1e293b] rounded-lg hover:bg-[#4ade80] transition-colors duration-300">Lihat Resep</button>
-                <button class="w-full bg-[#15803d] py-2 text-[1.1rem] text-white rounded-lg hover:bg-[#14532d] transition-colors duration-300">Simpan Resep</button>
+            <div class="recommended-recipe">
+                <img src="https://www.themealdb.com/images/media/meals/1529442316.jpg" alt="Ayam Bakar Taliwang" class="recipe-img">
+                <h3 class="recipe-title">Ayam Bakar Taliwang</h3>
+                <p class="recipe-desc">Ayam bakar khas Lombok dengan bumbu pedas yang menggugah selera.</p>
+                <button class="btn-view">Lihat Resep</button>
+                <button class="btn-save">Simpan Resep</button>
             </div>
 
-            <div class="w-90% bg-white flex flex-col p-4 gap-2 m-2 text-[#1e293b] shadow-md border border-gray-100 rounded-lg duration-300 transition-all hover:-translate-y-1 hover:border-[#15803d] hover:z-10 max-[480px]:gap-3">
-                <img src="https://www.themealdb.com/images/media/meals/1529442316.jpg" alt="Ayam Bakar Taliwang" 
-                     class="w-full h-[165px] rounded-lg object-cover 
-                     max-[480px]:h-[120px]">
-                <h3 class="text-[1.1rem] font-semibold">Ayam Bakar Taliwang</h3>
-                <p class="text-[1rem]">Ayam bakar khas Lombok dengan bumbu pedas yang menggugah selera.</p>
-                <button class="w-full bg-[#bbf7d0] py-2 text-[1.1rem] text-[#1e293b] rounded-lg hover:bg-[#4ade80] transition-colors duration-300">Lihat Resep</button>
-                <button class="w-full bg-[#15803d] py-2 text-[1.1rem] text-white rounded-lg hover:bg-[#14532d] transition-colors duration-300">Simpan Resep</button>
+            <div class="recommended-recipe">
+                <img src="https://www.themealdb.com/images/media/meals/1529442316.jpg" alt="Ayam Bakar Taliwang" class="recipe-img">
+                <h3 class="recipe-title">Ayam Bakar Taliwang</h3>
+                <p class="recipe-desc">Ayam bakar khas Lombok dengan bumbu pedas yang menggugah selera.</p>
+                <button class="btn-view">Lihat Resep</button>
+                <button class="btn-save">Simpan Resep</button>
             </div>
 
-            <div class="w-90% bg-white flex flex-col p-4 gap-2 m-2 text-[#1e293b] shadow-md border border-gray-100 rounded-lg duration-300 transition-all hover:-translate-y-1 hover:border-[#15803d] hover:z-10 max-[480px]:gap-3">
-                <img src="https://www.themealdb.com/images/media/meals/1529442316.jpg" alt="Ayam Bakar Taliwang" 
-                     class="w-full h-[165px] rounded-lg object-cover 
-                     max-[480px]:h-[120px]">
-                <h3 class="text-[1.1rem] font-semibold">Ayam Bakar Taliwang</h3>
-                <p class="text-[1rem]">Ayam bakar khas Lombok dengan bumbu pedas yang menggugah selera.</p>
-                <button class="w-full bg-[#bbf7d0] py-2 text-[1.1rem] text-[#1e293b] rounded-lg hover:bg-[#4ade80] transition-colors duration-300">Lihat Resep</button>
-                <button class="w-full bg-[#15803d] py-2 text-[1.1rem] text-white rounded-lg hover:bg-[#14532d] transition-colors duration-300">Simpan Resep</button>
+            <div class="recommended-recipe">
+                <img src="https://www.themealdb.com/images/media/meals/1529442316.jpg" alt="Ayam Bakar Taliwang" class="recipe-img">
+                <h3 class="recipe-title">Ayam Bakar Taliwang</h3>
+                <p class="recipe-desc">Ayam bakar khas Lombok dengan bumbu pedas yang menggugah selera.</p>
+                <button class="btn-view">Lihat Resep</button>
+                <button class="btn-save">Simpan Resep</button>
             </div>
 
         </div>
@@ -177,13 +148,59 @@
 
     <!-- Popup -->
     <section id="recipe_popup" class="hidden">
-            <div class="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
-                <div class="bg-white rounded-lg p-6 w-[90%] max-w-md text-center">
-                    <h2 class="text-xl font-bold mb-4">Resep Disimpan!</h2>
-                    <p class="mb-6">Resep telah berhasil disimpan ke koleksi Anda.</p>
-                    <button id="close_recipe_detail" class="bg-[#15803d] text-white px-4 py-2 rounded-lg hover:bg-[#14532d] transition-colors duration-300">Tutup</button>
+        <div class="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-4 
+                    max-[480px]:max-w-[100vw] max-[480px]:p-2">
+            <div class="w-full max-w-5xl max-h-[90vh] bg-white flex flex-col min-[768px]:flex-row p-6 md:p-8 gap-8 rounded-xl shadow-2xl relative overflow-y-auto 
+                        max-[480px]:min-w-[340px] max-[480px]:w-[90vw] max-[480px]:p-4 max-[480px]:gap-4">
+                <div class="w-full min-[768px]:w-2/5 flex-shrink-0">
+                    <img id="popup_img" src="" alt="Foto Resep" 
+                        class="w-full h-auto object-cover rounded-lg shadow-md sticky top-0 
+                        max-[480px]:max-h-[250px] max-[480px]:mt-8">
                 </div>
+                <div class="w-full min-[768px]:w-3/5 flex flex-col gap-4 text-[#1e293b] max-[480px]:gap-3">
+                    <button id="close_recipe_detail" class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-lg hover:bg-red-600 transition-colors duration-300 z-10 
+                                                            max-[480px]:top-3 max-[480px]:right-3 max-[480px]:text-xs max-[480px]:px-2">
+                        Tutup
+                    </button>
+                    <button id="save_recipe" class="absolute top-14 right-4 bg-green-500 text-white px-3 py-1 rounded-lg hover:bg-green-600 transition-colors duration-300 z-10 
+                                                    max-[480px]:top-3 max-[480px]:right-[4.5rem] max-[480px]:text-xs max-[480px]:px-2 max-[480px]:right-24">
+                        Simpan
+                    </button>
+                    <div class="max-[480px]:mt-2">
+                        <h2 id="popup_title" class="text-3xl font-bold 
+                                                    max-[480px]:text-xl">
+                            Nama Makanan
+                        </h2>
+                        <span id="popup_country" class="inline-block px-4 py-1 mt-2 bg-[#bbf7d0] text-[#15803d] text-sm font-semibold rounded-full 
+                                                        max-[480px]:text-xs max-[480px]:px-3">
+                            Asal Negara
+                        </span>
+                         <span id="popup_category" class="inline-block px-4 py-1 mt-2 bg-[#bbf7d0] text-[#15803d] text-sm font-semibold rounded-full 
+                                                        max-[480px]:text-xs max-[480px]:px-3">
+                            kategori
+                        </span>
+                    </div>
+                    <hr class="border-gray-200">
+                    <div>
+                        <h3 class="text-xl font-bold mb-3 flex items-center gap-2 
+                                max-[480px]:text-lg max-[480px]:mb-2">🛒 Bahan-bahan</h3>
+                        <ul id="popup_ingredients" class="w-full grid grid-cols-2 gap-x-4 gap-y-2 text-[1rem]
+                                                        max-[480px]:grid-cols-1 max-[480px]:text-[0.9rem]">
+                        </ul>
+                    </div>
+                    <hr class="border-gray-200">
+                    <div>
+                        <h3 class="text-xl font-bold mb-3 flex items-center gap-2 
+                                max-[480px]:text-lg max-[480px]:mb-2">👨‍🍳 Cara Membuat</h3>
+                        <p id="popup_instructions" class="text-[1rem] leading-relaxed text-gray-700 whitespace-pre-line text-justify 
+                                                            max-[480px]:text-[0.9rem]">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                        </p>
+                    </div>
+                </div>
+
             </div>
+        </div>
     </section>
 
     <!-- Popup -->
@@ -197,6 +214,18 @@
             </div>
     </section>
 
+    <!-- Popup -->
+    <section id="setting_popup" class="hidden">
+            <div class="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
+                <div class="bg-white rounded-lg p-6 w-[90%] max-w-md text-center">
+                    <h2 class="text-xl font-bold mb-4">Pengaturan</h2>
+                    <p class="mb-6">Hapus semua resep yang disimpan?</p>
+                    <button id="delete_button" class="bg-[#15803d] text-white px-4 py-2 rounded-lg hover:bg-[#14532d] transition-colors duration-300">Ya</button>
+                    <button id="cancel_delete_button" class="bg-[#15803d] text-white px-4 py-2 rounded-lg hover:bg-[#14532d] transition-colors duration-300">Batal</button>
+                </div>
+            </div>
+    </section>
+
     <!-- Footer -->
     <footer class="w-full min-[481px]:min-w-[1100px] bg-[#333333] py-10 text-white text-center">
         <p class="opacity-80">&copy; 2026 Daffa Fahrezi Purdyansyah. All Rights Reserved.</p>
@@ -205,6 +234,7 @@
     <script src="js/dom.js"></script>
     <script src="js/config.js"></script>
     <script src="js/search.js"></script>
-    <script src="js/seeRecipeDetail.js"></script>
+    <script src="js/save.js"></script>
+    <script src="js/setting.js"></script>
 </body>
 </html>
