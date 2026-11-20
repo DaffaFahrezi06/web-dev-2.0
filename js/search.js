@@ -71,7 +71,7 @@ async function getRecipeById(id) {
     }
     return null;
 }
-s
+
 if (mainDOM.recipesContainer) {
     mainDOM.recipesContainer.addEventListener('click', async (event) => {
         const card = event.target.closest('.recommended-recipe');
